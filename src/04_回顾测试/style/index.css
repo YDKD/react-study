@@ -1,0 +1,14 @@
+.tab-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.acitve {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.tab-bar-item {
+    padding: 3px 5px;
+}
