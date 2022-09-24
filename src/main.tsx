@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './03_小案例/App'
 // import App from './04_回顾测试/App'
 // import App from './05_生命周期/App'
-import App from './06_父子传值-回调函数/App'
+// import App from './06_父子传值-回调函数/App'
+import App from './07_插槽-children/App'
 
 import './index.css'
 
