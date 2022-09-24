@@ -1,0 +1,14 @@
+.nav-bar {
+  display: flex;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.left,
+.right {
+  width: 120px;
+}
+.center {
+  flex: 1;
+}
