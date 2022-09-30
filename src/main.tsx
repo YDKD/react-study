@@ -6,7 +6,9 @@ import ReactDOM from 'react-dom/client'
 // import App from './06_父子传值-回调函数/App'
 // import App from './07_插槽-children/App'
 // import App from './08_插槽-props/App'
-import App from './09_组件通信-context/App'
+// import App from './09_组件通信-context/App'
+// import App from './10_setState的三种写法/App'
+import App from './11_获取setState更新后的值/App'
 
 import './index.css'
 
