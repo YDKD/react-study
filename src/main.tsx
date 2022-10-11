@@ -11,7 +11,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './11_获取setState更新后的值/App'
 // import App from './12_pureComponent/App'
 // import App from './13_数据的不可变性/App'
-import App from './14_ref获取DOM/App'
+// import App from './14_ref获取DOM/App'
+import App from './15_ref获取类组件和函数组件/App'
 
 import './index.css'
 
