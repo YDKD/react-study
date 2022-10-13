@@ -10,6 +10,7 @@ interface IState {
   password: string;
   agree: boolean;
   sex: ISex[];
+  selectPhone: string[];
 }
 
 export class App extends PureComponent<any, IState> {
@@ -30,6 +31,7 @@ export class App extends PureComponent<any, IState> {
           value: true,
         },
       ],
+      selectPhone: ['iphone12']
     };
   }
 
@@ -64,8 +66,17 @@ export class App extends PureComponent<any, IState> {
     this.setState({ sex: sex });
   }
 
+  handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    const { selectedOptions } = e.target
+    const values = Array.from(selectedOptions, (item) => item.value)
+    
+    this.setState({
+      selectPhone: values
+    })
+  }
+
   render() {
-    const { username, password, agree, sex } = this.state;
+    const { username, password, agree, sex, selectPhone } = this.state;
     return (
       <div>
         <label htmlFor="username">
@@ -86,12 +97,22 @@ export class App extends PureComponent<any, IState> {
         性别：
         {sex.map((item, index) => {
           return (
-            <label htmlFor={"sex" + index} key={index}>
-              <input type="radio" id={"sex" + index} name="sex" checked={item.value} onChange={(e) => this.handleRadioChange(e, index)} /> {item.label}
+            <label htmlFor={item.label} key={index}>
+              <input type="radio" id={item.label} name="sex" checked={item.value} onChange={(e) => this.handleRadioChange(e, index)} /> {item.label}
             </label>
           );
         })}
         <br />
+
+        <div>
+          手机：
+          <select multiple value={selectPhone} onChange={(e) => this.handleSelectChange(e)}>
+            <option value="iphone12">iphone12</option>
+            <option value="iphone13">iphone13</option>
+            <option value="iphone14">iphone14</option>
+          </select>
+        </div>
+
         <button onClick={() => this.showForm()}>Submit</button>
       </div>
     );
