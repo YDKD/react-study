@@ -1,0 +1,27 @@
+
+
+.ydkd-enter {
+    opacity: 0;
+    transform: translateX(200px);
+    /* transform: scale(1.5); */
+}
+
+.ydkd-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    /* transform: scale(1); */
+    transition: all 2000ms ease;
+}
+
+.ydkd-exit {
+    opacity: 1;
+    transform: translateX(0);
+    /* transform: scale(1); */
+}
+
+.ydkd-exit-active {
+    opacity: 0;
+    transform: translateX(200px);
+    /* transform: scale(1.5); */
+    transition: all 2000ms ease;
+}
