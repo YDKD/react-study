@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Home from './Home/Home'
 import Banner from './Banner/Banner'
+import Footer from './Footer/App'
 
 export class App extends PureComponent {
   render() {
@@ -8,6 +9,7 @@ export class App extends PureComponent {
       <div>
         <Home></Home>
         <Banner></Banner>
+        <Footer />
       </div>
     )
   }
