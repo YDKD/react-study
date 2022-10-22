@@ -18,7 +18,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './18_动画过度/App'
 // import App from './19_css_module/App'
 // import App from './20_css_in_js/App'
-import App from './21_classnames/App'
+// import App from './21_classnames/App'
+import App from './22_redux/01_原生的store/App'
 
 import './index.css'
 
