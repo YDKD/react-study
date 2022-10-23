@@ -5,6 +5,7 @@ import store from './store/index'
 
 import App1 from './01_原生的store/App'
 import App2 from './02_react-redux/App'
+import ReduxThunk from './03_redux-thunk/App'
 
 export class App extends PureComponent {
   render() {
@@ -16,6 +17,7 @@ export class App extends PureComponent {
         <h1>react-redux</h1>
         <Provider store={ store  }>
             <App2 />
+            <ReduxThunk />
         </Provider>
       </div>
     )

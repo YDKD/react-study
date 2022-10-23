@@ -1,4 +1,5 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 import reducer from './reducer'
 
 // 创建 redux分为一下几步
@@ -9,4 +10,4 @@ import reducer from './reducer'
 // 5. 创建dispatch
 // 6. 创建subscribe
 
-export default createStore(reducer)
+export default createStore(reducer, applyMiddleware(thunk))
