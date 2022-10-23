@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import { Unsubscribe } from 'redux'
-import store from './store'
-import { CHANGE_NAME } from './store/constants'
-import { changeName } from './store/creators'
+import store from '../store/index'
+import { changeNameAction } from '../store/creators'
 
 interface IState {
 	name: string
@@ -15,28 +14,21 @@ export class App extends PureComponent<any, IState> {
 		super(props)
 
 		this.state = {
-			name: '',
-			age: 0
+			name: store.getState().name,
+			age: store.getState().age
 		}
 	}
 
 	componentDidMount(): void {
-		this.setState({
-			name: store.getState().name
-		})
 		this.unsubStore = store.subscribe(() => {
-			console.log('state', store.getState())
+			this.setState({
+				name: store.getState().name
+			})
 		})
 	}
 
 	changeName() {
-		changeName('zs')
-
-		this.setState({
-			name: store.getState().name
-		})
-
-        this.unsubStore!()
+		store.dispatch(changeNameAction('zs'))
 	}
 
 	render() {
