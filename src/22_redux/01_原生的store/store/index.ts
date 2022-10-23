@@ -1,25 +1,12 @@
 import { createStore } from 'redux'
+import reducer from './reducer'
 
-type TActionType = 'change_name'
-
-interface IAction {
-	type: TActionType
-	name?: string
-	age?: number
-}
-
-const initialState = {
-	name: 'zmy',
-	age: 24
-}
-
-function reducer(state = initialState, action: IAction) {
-	switch (action.type) {
-		case 'change_name':
-			return { ...state, name: action.name }
-		default:
-			return state
-	}
-}
+// 创建 redux分为一下几步
+// 1. 创建store
+// 2. 创建reducer
+// 3. 创建action
+// 4. 创建action creator
+// 5. 创建dispatch
+// 6. 创建subscribe
 
 export default createStore(reducer)

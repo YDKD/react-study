@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import { Unsubscribe } from 'redux'
 import store from './store'
+import { CHANGE_NAME } from './store/constants'
+import { changeName } from './store/creators'
 
 interface IState {
 	name: string
@@ -28,10 +30,7 @@ export class App extends PureComponent<any, IState> {
 	}
 
 	changeName() {
-		store.dispatch({
-			type: 'change_name',
-			name: 'zs'
-		})
+		changeName('zs')
 
 		this.setState({
 			name: store.getState().name
