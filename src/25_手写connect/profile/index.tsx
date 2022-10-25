@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 // import { connect } from 'react-redux'
-import connect from '../connect'
+import connect from '../hoc/connect'
 import { decrement, fectHomeAction, increment } from '../store/features/counter/counterSlice'
 
 interface IProps {
@@ -10,7 +10,7 @@ interface IProps {
   fectHomeAction: () => void
 }
 
-export class user extends PureComponent<IProps> {
+export class profile extends PureComponent<IProps> {
   constructor(props: IProps) {
     super(props)
   }
@@ -60,4 +60,4 @@ const mapStateToDispatch = (dispatch: any) => ({
   }
 })
 
-export default connect(mapStateToProps, mapStateToDispatch)(user)
+export default connect(mapStateToProps, mapStateToDispatch)(profile)
