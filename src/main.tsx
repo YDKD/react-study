@@ -21,7 +21,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './21_classnames/App'
 // import App from './22_redux/App'
 // import App from './23_redux应用/App'
-import App from './24_redux-tool-kit/App'
+// import App from './24_redux-tool-kit/App'
+import App from './25_手写connect/App'
 
 import './index.css'
 
