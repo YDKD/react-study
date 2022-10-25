@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@reduxjs/toolkit': ^1.8.6
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
   '@types/react-transition-group': ^4.4.5
@@ -21,6 +22,7 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
+  '@reduxjs/toolkit': 1.8.6_kuo2ie247izvzll3jejufdtq3q
   '@types/styled-components': 5.1.26
   axios: 1.1.3
   classnames: 2.3.2
@@ -390,6 +392,25 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+
+  /@reduxjs/toolkit/1.8.6_kuo2ie247izvzll3jejufdtq3q:
+    resolution: {integrity: sha512-4Ia/Loc6WLmdSOzi7k5ff7dLK8CgG2b8aqpLsCAJhazAzGdp//YBUSaj0ceW6a3kDBDNRrq5CRwyCS0wBiL1ig==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+    dependencies:
+      immer: 9.0.16
+      react: 18.2.0
+      react-redux: 8.0.4_yfr4m6wk75wdra335rld4tkrbu
+      redux: 4.2.0
+      redux-thunk: 2.4.1_redux@4.2.0
+      reselect: 4.1.6
+    dev: false
 
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
@@ -917,6 +938,10 @@ packages:
     requiresBuild: true
     optional: true
 
+  /immer/9.0.16:
+    resolution: {integrity: sha512-qenGE7CstVm1NrHQbMh8YaSzTZTFNP3zPqr3YU0S0UY441j4bJTg4A2Hh5KAhwgaiU6ZZ1Ar6y/2f4TblnMReQ==}
+    dev: false
+
   /is-core-module/2.10.0:
     resolution: {integrity: sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==}
     dependencies:
@@ -1181,6 +1206,10 @@ packages:
 
   /regenerator-runtime/0.13.10:
     resolution: {integrity: sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==}
+    dev: false
+
+  /reselect/4.1.6:
+    resolution: {integrity: sha512-ZovIuXqto7elwnxyXbBtCPo9YFEr3uJqj2rRbcOOog1bmu2Ag85M4hixSwFWyaBMKXNgvPaJ9OSu9SkBPIeJHQ==}
     dev: false
 
   /resolve/1.22.1:
