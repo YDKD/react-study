@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+import { BrowserRouter } from 'react-router-dom'
+
 // import App from './03_小案例/App'
 // import App from './04_回顾测试/App'
 // import App from './05_生命周期/App'
@@ -23,7 +26,8 @@ import ReactDOM from 'react-dom/client'
 // import App from './23_redux应用/App'
 // import App from './24_redux-tool-kit/App'
 // import App from './25_手写connect/App'
-import App from './26_实现中间件/App'
+// import App from './26_实现中间件/App'
+import App from './27_router/01_初识router/App'
 
 import './index.css'
 
@@ -33,6 +37,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   // <React.StrictMode>
+  <BrowserRouter>
     <App />
+  </BrowserRouter>
   // </React.StrictMode>
 )
