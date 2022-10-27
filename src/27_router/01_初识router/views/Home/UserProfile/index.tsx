@@ -1,7 +1,13 @@
 import React, { PureComponent } from 'react'
 import { WithRouter } from '../../../hoc';
+import { IRouter } from '../../types';
 
-export class index extends PureComponent {
+interface IProps {
+  router: IRouter
+}
+
+
+export class index extends PureComponent<IProps> {
   render() {
     const { params } = this.props.router
     return (
