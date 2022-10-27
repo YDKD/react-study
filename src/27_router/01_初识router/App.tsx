@@ -10,14 +10,15 @@ import HomeUserAvatar from './views/Home/UserAvatar'
 import HomeUserProfile from './views/Home/UserProfile'
 import NotFound from './views/NotFound'
 import { WithRouter } from './hoc'
+import { IRouter } from './views/types'
 
 interface IProps {
-	router: (path: string) => void
+	router: IRouter
 }
 
 export class App extends PureComponent<IProps> {
 	handleRouteJump(path: string) {
-		this.props.router(path)
+		this.props.router.navigate(path)
 	}
 
 	render() {
@@ -30,7 +31,8 @@ export class App extends PureComponent<IProps> {
 					<NavLink to="/home">home</NavLink>
 					<NavLink to="/about">About</NavLink>
 
-					<button onClick={() => this.handleRouteJump('/home/user-profile')}>路由跳转到Profile</button>
+					<button onClick={() => this.handleRouteJump('/home/user-profile/123')}>动态路由跳转到Profile</button>
+					<button onClick={() => this.handleRouteJump('/home/user-avatar?id=456&name=test')}>query路由跳转到Avatar</button>
 				</div>
 				<Routes>
 					{/* navigate可以处理当我们访问一个路径时，直接重定向到另外一个路由 */}
@@ -41,7 +43,7 @@ export class App extends PureComponent<IProps> {
 						<Route path="/home" element={<Navigate to="/home/user-info" />} />
 						<Route path="/home/user-info" element={<HomeUserInfo />} />
 						<Route path="/home/user-avatar" element={<HomeUserAvatar />} />
-						<Route path="/home/user-profile" element={<HomeUserProfile />} />
+						<Route path="/home/user-profile/:id" element={<HomeUserProfile />} />
 					</Route>
 					<Route path="/about" element={<About />}></Route>
 					<Route path="/404" element={<NotFound />}></Route>
