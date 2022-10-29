@@ -27,7 +27,8 @@ import { BrowserRouter } from 'react-router-dom'
 // import App from './24_redux-tool-kit/App'
 // import App from './25_手写connect/App'
 // import App from './26_实现中间件/App'
-import App from './27_router/App'
+// import App from './27_router/App'
+import App from './28_hooks/02_useEffect/App'
 
 import './index.css'
 
