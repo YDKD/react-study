@@ -24,10 +24,23 @@ const App = memo(() => {
 
     // useCallback中，如果依赖项没有发生变化，则每次函数重新执行的时候，还是会记录上一次的依赖项，这样就会导致函数组件的重复渲染
 
+	// 方案一：使用useCallback，依赖项为当前依赖项
+	
+	// const increment = useCallback(() => {
+	// 	console.log('函数重新执行了')
+	// 	setCount(count + 1)
+	// }, [count])
+
+	// 方案二：使用useCallback的记忆功能，依赖项为空数组
+	// 使用useRef来记录上一次的依赖项
+	const countRef = React.useRef(0)
+	countRef.current = count
+	
+
 	const increment = useCallback(() => {
 		console.log('函数重新执行了')
-		setCount(count + 1)
-	}, [count])
+		setCount(countRef.current + 1)
+	}, [])
 
 	return (
 		<div>
