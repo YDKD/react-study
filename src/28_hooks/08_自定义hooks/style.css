@@ -1,0 +1,9 @@
+.app {
+    height: 2000px;
+}
+
+.value {
+    position: fixed;
+    top: 50%;
+    left: 50$;
+}
