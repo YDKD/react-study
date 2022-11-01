@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import hooksStore from './28_hooks/09_redux的hooks/store'
 
 // import App from './03_小案例/App'
 // import App from './04_回顾测试/App'
@@ -28,7 +30,7 @@ import { BrowserRouter } from 'react-router-dom'
 // import App from './25_手写connect/App'
 // import App from './26_实现中间件/App'
 // import App from './27_router/App'
-import App from './28_hooks/08_自定义hooks/App'
+import App from './28_hooks/09_redux的hooks/App'
 
 import './index.css'
 
@@ -37,9 +39,11 @@ import './index.css'
 // import './04_回顾测试/style/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <React.StrictMode>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  // </React.StrictMode>
+	// <React.StrictMode>
+	<BrowserRouter>
+		<Provider store={hooksStore}>
+			<App />
+		</Provider>
+	</BrowserRouter>
+	// </React.StrictMode>
 )
