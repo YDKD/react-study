@@ -2,17 +2,23 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const counterSlice = createSlice({
 	name: 'counter',
-	initialState: 0,
+	initialState: {
+		count: 0,
+		message: 'hello world'
+	},
 	reducers: {
-		addNumber(state, { payload }) {
-			return state + payload
+		addNumberAction(state, { payload }) {
+			state.count += payload
 		},
-		subNumber(state, { payload }) {
-			return state - payload
+		subNumberAction(state, { payload }) {
+			state.count -= payload
+		},
+		changeMessageAction(state, { payload }) {
+			state.message = payload
 		}
 	}
 })
 
-export const { addNumber, subNumber } = counterSlice.actions
+export const { addNumberAction, subNumberAction, changeMessageAction } = counterSlice.actions
 
 export default counterSlice.reducer
