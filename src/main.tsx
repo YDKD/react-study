@@ -30,7 +30,7 @@ import hooksStore from './28_hooks/09_redux的hooks/store'
 // import App from './25_手写connect/App'
 // import App from './26_实现中间件/App'
 // import App from './27_router/App'
-import App from './28_hooks/09_redux的hooks/App'
+import App from './28_hooks/10_useTransition/App'
 
 import './index.css'
 
